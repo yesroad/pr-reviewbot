@@ -2,8 +2,19 @@
 
 > **GitHub App + Webhook + OpenAI 통합 자동 코드 리뷰 시스템**
 
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white)](https://openai.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://github-pr-ai-agent.vercel.app)
+
 GitHub Pull Request 생성 시 코드 변경 사항을 분석하고,
 OpenAI를 활용해 자동으로 구조화된 코드 리뷰를 남기는 GitHub App입니다.
+
+## 📸 데모
+
+<!-- PR 리뷰 자동 등록 화면 GIF -->
+
+> 🔗 **라이브**: [github-pr-ai-agent.vercel.app](https://github-pr-ai-agent.vercel.app)
 
 ## 🎯 제작 배경
 
@@ -69,10 +80,6 @@ public/
   └── ...                   # 정적 파일
 ```
 
-## 🔗 데모
-
-🌐 **배포 URL**: [github-pr-ai-agent.vercel.app](https://github-pr-ai-agent.vercel.app)
-
 ## 📌 작동 방식
 
 1. PR 생성 → Webhook 발동
@@ -108,3 +115,11 @@ yarn dev
 # Vercel CLI로 배포
 vercel --prod
 ```
+
+## 🤔 What I'd Do Differently
+
+1. **리뷰 품질 피드백 루프 추가** — 현재는 AI가 리뷰를 남기면 끝인데, 리뷰가 실제로 반영됐는지(PR 코멘트 resolved 여부)를 추적해서 프롬프트를 개선하는 피드백 루프를 만들면 리뷰 품질이 올라갈 것
+
+2. **언어/프레임워크 감지 후 프롬프트 분기** — 현재는 단일 프롬프트를 사용하는데, diff에서 언어와 프레임워크를 감지해 TypeScript/Python/Go 등 언어별 전문 리뷰 규칙을 적용하면 더 정확한 리뷰가 가능할 것
+
+3. **GitHub Actions 버전도 함께 제공** — GitHub App 설치 과정이 다소 복잡해서, 워크플로우 파일만 추가하면 동작하는 GitHub Actions 버전을 함께 제공했다면 더 많은 사람이 쉽게 사용할 수 있었을 것
