@@ -1,4 +1,4 @@
-# GitHub PR AI Agent 🤖
+# PR REVIEW BOT 🤖
 
 > **GitHub App + Webhook + OpenAI 통합 자동 코드 리뷰 시스템**
 
