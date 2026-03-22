@@ -12,7 +12,7 @@ OpenAI를 활용해 자동으로 구조화된 코드 리뷰를 남기는 GitHub 
 
 ## 📸 데모
 
-<!-- PR 리뷰 자동 등록 화면 GIF -->
+![AI Code Review Summary](./assets/demo-review.png)
 
 > 🔗 **라이브**: [github-pr-ai-agent.vercel.app](https://github-pr-ai-agent.vercel.app)
 
